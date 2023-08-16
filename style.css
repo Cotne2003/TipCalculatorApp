@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #C5E4E7;
+    font-family: 'Space Mono', monospace;
+    flex-direction: column;
+    gap: 87.86px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    padding: 32px 32px 32px 48px;
+    box-shadow: 0px 32px 43px 0px #4FA6AF33;
+    border-radius: 25px;
+}
+
+
+
+/* LEFT SIDE *************************************************************************** */
+
+
+
+.left-side {
+    padding: 13px 48px 16px 0;
+}
+
+
+section{
+    position: relative;
+    margin-top: 6px;
+}
+
+h2 {
+    color: #5E7A7D;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input {
+    cursor: pointer;
+    padding-right: 17px;
+}
+
+input:focus {
+    outline: 2px solid #26C2AE;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.bill input,
+.num-of-ppl input {
+    width: 379px;
+    height: 48px;
+    text-align: right;
+    border-radius: 5px;
+    background: #F3F9FA;
+    border: none;
+    color: #00474B;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.bill img,
+.num-of-ppl img {
+    position: absolute;
+    left: 19.26px;
+    top: 16.87px;
+}
+
+.select-tips {
+    margin-top: 40px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 16px;
+    margin-top: 16px;
+}
+
+.buttons button {
+    width: 117px;
+    height: 48px;
+    border-radius: 5px;
+    background: #00474B;
+    border:  none;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFF;
+    transition: .3s ease-in-out;
+}
+
+.select-tips button:hover {
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
+
+.select-tips button:focus {
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
+
+.buttons input {
+    width: 118px;
+    height: 48px;
+    border-radius: 5px;
+    background: #F3F9FA;
+    border: none;
+    color: #547878;
+    text-align: right;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.num-of-ppl {
+    margin-top: 40px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title span {
+    color: #E17457;
+    font-size: 16px;
+    font-weight: 700;
+    display: none;
+}
+
+
+
+
+/* RIGHT SIDE ***************************************************************************** */
+
+
+.right-side {
+    background-color: #00474B;
+    position: relative;
+    padding: 56px 40px 40px 40px;
+    border-radius: 15px;
+}
+
+.tip-amount,
+.total {
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    margin-top: 53px;
+}
+
+.tip-amount h2,
+.total h2 {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.amount {
+    color: #26C2AE;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    position: absolute;
+    right: 40px;
+}
+
+.person {
+    color: #7F9D9F;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.reset {
+    width: 333px;
+    height: 48px;
+    border-radius: 5px;
+    background: #0D686D;
+    border: none;
+    color: #00474B;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 122px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background: #9FE8DF;
+}
+
+
+
+
+
+/* MOBILE AND TABLET ************************************************************ */
+
+
+
+@media (max-width: 1023px) {
+
+    body {
+        gap: 40.86px;
+        justify-content: space-around;
+        height: auto;
+    }
+
+    main {
+        max-width: 768px;
+    }
+
+    svg {
+        margin-top:50px;
+    }
+
+    main {
+        flex-direction: column;
+        width: 100%;
+        padding: 32px 24px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .left-side {
+        width: 100%;
+        padding-right: 9.82px;
+        padding-top: 0;
+    }
+
+    .bill input {
+        width: 100%;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16.56px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .buttons button:hover {
+        background: #26C2AE
+    }
+
+    .buttons input {
+        width: 100%;
+    }
+
+    .amount {
+        font-size: 32px;
+        letter-spacing: -0.667px;
+    }
+
+    .reset {
+        width: 100%;
+    }
+
+    .num-of-ppl input {
+        width: 100%;
+    }
+
+    .right-side {
+        padding: 37px 22px 24px 24px;
+    }
+
+    .tip-amount,
+    .total {
+        gap: 0;
+        justify-content: space-between
+    }
+
+    .reset {
+        margin-top: 33px;
+    }
+
+    .reset:hover {
+        background: #26C2AE
+    }
+}
